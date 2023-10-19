@@ -94,7 +94,7 @@ void printFibonacci(int n)
 }
 int question10(int n)
 {
-	int a[50];
+	int a[100];
 	a[0] = 0; a[1] = 1;
 	int i = 2;
 	int temp = 0, result = a[0];
@@ -131,11 +131,51 @@ int question12(int n)
 	}	
 	return A*n;
 }
-
+int 1question13(int n)
+{
+ if(n==1)
+  return 1;
+ if(n==2)
+  return 2;
+ if (n==3)
+  return 3;
+ return 1question13(n-1) + 2 * 1question13(n-2) + 3 * 1question13(n-3);
+}
+int 2question13(int n)
+{
+ int a[100];
+ a[1] = 1;
+ a[2] = 2;
+ a[3] = 3;
+ int i = 4;
+ for(int i = 4; i<100;i++)
+{
+ a[i] = a[i-1] + 2 * a[i-2] + 3 * a[i-3];
+}
+ return a[n];
+}
+int 1question14(int n)
+{
+ if(n==1)
+  return 1;
+ if(n==2)
+  return 1;
+ return 1question14(n-1) + (n-1)*1question14(n-2);
+}
+int 2question14(int n)
+{
+ int a[100];
+ a[1] = 1;
+ a[2] = 1;
+ i=3;
+ for(i = 3; i<100;i++)
+ {
+  a[i] = a[i-1] + (i-1)*a[i-2];
+ }
+ return a[n];
+}
 void main()
 {
-	int a = 10, b = 1, c = 5;
-	int d[6] = {0,1,2,3,5,6};
-	printf("The result is: %d", question11a(1));
+
 	_getch();
 }
